@@ -2,7 +2,7 @@
 
 - [x] Vite
 - [x] Typescript
-- [ ] Redux Toolkit
-- [ ] Emotion
+- [x] Redux Toolkit
+- [ ] Styled Components
 - [ ] Tailwind CSS
 - [ ] Twin.macro
