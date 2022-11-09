@@ -1,7 +1,8 @@
 # Project Skill Set
-[x] Vite
-[x] Typescript
-[ ] Redex Toolkit
-[ ] Emotion
-[ ] Tailwind CSS
-[ ] Twin.macro
+
+- [x] Vite
+- [x] Typescript
+- [ ] Redux Toolkit
+- [ ] Emotion
+- [ ] Tailwind CSS
+- [ ] Twin.macro
