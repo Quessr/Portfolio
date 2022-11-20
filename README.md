@@ -6,3 +6,5 @@
 - [x] Styled Components
 - [x] Tailwind CSS
 - [x] Twin.macro
+- [] ESLint + Prettier
+- [] Storybook
