@@ -1,8 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
+import styled from "styled-components";
 import { RootState } from "./store";
 import { decrement, incrementByAmount } from "./store/counter";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+
+const Button = styled.button`
+  color: purple;
+  border: 1px solid purple;
+  background-color: white;
+  &:focus {
+    outline: 2px solid purple;
+  }
+`;
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -24,9 +34,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={handleIncrement}>+</button>
+        <Button onClick={handleIncrement}>+</Button>
         <div>count is {count}</div>
-        <button onClick={handleDecrement}>-</button>
+        <Button onClick={handleDecrement}>-</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

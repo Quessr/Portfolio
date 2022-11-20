@@ -3,6 +3,6 @@
 - [x] Vite
 - [x] Typescript
 - [x] Redux Toolkit
-- [ ] Styled Components
+- [x] Styled Components
 - [ ] Tailwind CSS
 - [ ] Twin.macro
