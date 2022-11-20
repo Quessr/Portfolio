@@ -1,10 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
-import tw from "twin.macro";
-import { RootState } from "./store";
-import { decrement, incrementByAmount } from "./store/counter";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import { RootState } from './store';
+import { decrement, incrementByAmount } from './store/counter';
+import reactLogo from './assets/react.svg';
+import './App.css';
 
 const Button = styled.button`
   ${tw`px-2 text-purple-500 border border-purple-500 bg-white outline-none`}
