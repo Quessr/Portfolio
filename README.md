@@ -4,5 +4,5 @@
 - [x] Typescript
 - [x] Redux Toolkit
 - [x] Styled Components
-- [ ] Tailwind CSS
-- [ ] Twin.macro
+- [x] Tailwind CSS
+- [x] Twin.macro
