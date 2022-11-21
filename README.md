@@ -7,4 +7,4 @@
 - [x] Tailwind CSS
 - [x] Twin.macro
 - [x] ESLint + Prettier
-- [] Storybook
+- [x] Storybook
