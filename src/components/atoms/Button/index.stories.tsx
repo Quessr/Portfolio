@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import 'twin.macro'
+import { ComponentMeta } from '@storybook/react';
+import 'twin.macro';
 
 import Button from '.';
 
@@ -12,7 +12,11 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-const SizesTemplate: ComponentStory<typeof Button> = () => {
+export const API = (props: typeof Button) => {
+  return <Button {...props} />;
+};
+
+export const Sizes = () => {
   return (
     <div tw="flex gap-4">
       <Button size="sm">small</Button>
@@ -21,4 +25,12 @@ const SizesTemplate: ComponentStory<typeof Button> = () => {
     </div>
   );
 };
-export const Sizes = SizesTemplate.bind({});
+
+export const Variants = () => {
+  return (
+    <div tw="flex gap-4">
+      <Button variant="fill">fill</Button>
+      <Button variant="outline">outline</Button>
+    </div>
+  );
+};
