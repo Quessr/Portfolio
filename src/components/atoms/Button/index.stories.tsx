@@ -31,6 +31,16 @@ export const Variants = () => {
     <div tw="flex gap-4">
       <Button variant="fill">fill</Button>
       <Button variant="outline">outline</Button>
+      <Button variant="ghost">ghost</Button>
+    </div>
+  );
+};
+
+export const Ellipse = () => {
+  return (
+    <div tw="flex gap-4">
+      <Button>default example</Button>
+      <Button ellipse={true}>ellipse example</Button>
     </div>
   );
 };

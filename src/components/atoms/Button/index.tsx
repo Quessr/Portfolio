@@ -1,20 +1,41 @@
+import clsx from 'clsx';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-export interface ButtonProps extends React.PropsWithChildren {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md' | 'lg';
-  variant?: 'fill' | 'outline';
+  variant?: 'fill' | 'outline' | 'ghost';
+  ellipse?: boolean;
 }
 
-const Button = ({ size = 'md', variant = 'fill', ...rest }: ButtonProps) => {
-  return <StyledButton className={`btn-${size} btn-${variant}`} {...rest} />;
+const Button = ({
+  size = 'md',
+  variant = 'fill',
+  ellipse,
+  ...rest
+}: ButtonProps) => {
+  // console.log(
+  //   [`btn-${size}`, `btn-${variant}`, ellipse && 'btn-ellipse']
+  //     .filter((c) => c)
+  //     .join(' ')
+  // );
+  return (
+    <StyledButton
+      className={clsx(
+        `btn-${size}`,
+        `btn-${variant}`,
+        ellipse && 'btn-ellipse',
+      )}
+      {...rest}
+    />
+  );
 };
 
 const StyledButton = styled.button`
   ${tw`min-w-max`}
   ${tw`text-purple-500`}
-  ${tw`border-2 border-purple-500 rounded-lg`}
-  ${tw`focus:ring-1 focus:ring-purple-500`}
+
 
   //sizes
   &.btn-sm {
@@ -31,10 +52,24 @@ const StyledButton = styled.button`
   &.btn-fill {
     ${tw`bg-purple-500`}
     ${tw`text-white`}
+    ${tw`border-2 border-purple-500 rounded-lg`}
+    ${tw`focus:ring-1 focus:ring-purple-500`}
   }
   &.btn-outline {
     ${tw`bg-white`}
     ${tw`text-purple-500`}
+    ${tw`border-2 border-purple-500 rounded-lg`}
+    ${tw`focus:ring-1 focus:ring-purple-500`}
+  }
+  &.btn-ghost {
+    ${tw`bg-none rounded-lg`}
+    ${tw`text-purple-500`}
+    ${tw`hover:bg-purple-50`}
+  }
+
+  //ellipse
+  &.btn-ellipse {
+    ${tw`rounded-[28px]`}
   }
 `;
 
