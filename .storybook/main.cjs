@@ -16,7 +16,10 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-  async viteFinal(config) {
+  async viteFinal(config, { configType }) {
+    if (configType === 'PRODUCTION') {
+      config.base = './Shopping-Mall';
+    }
     const { config: userConfig } = await loadConfigFromFile(
       path.resolve(__dirname, '../vite.config.ts'),
     );
@@ -25,7 +28,7 @@ module.exports = {
       (plugin) =>
         !(Array.isArray(plugin) && plugin[0]?.name.includes('vite:react')),
     );
-    
+
     return mergeConfig(config, userConfig);
   },
 };
