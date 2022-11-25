@@ -18,7 +18,7 @@ module.exports = {
   },
   async viteFinal(config, { configType }) {
     if (configType === 'PRODUCTION') {
-      config.base = './Shopping-Mall';
+      config.base = './';
     }
     const { config: userConfig } = await loadConfigFromFile(
       path.resolve(__dirname, '../vite.config.ts'),
