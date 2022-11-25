@@ -2,6 +2,9 @@ import { ComponentMeta } from '@storybook/react';
 import 'twin.macro';
 
 import Button from '.';
+import IconButton from './IconButton';
+import ArrowForwardIcon from '../Icons/ArrowForwardIcon';
+import TrashIcon from '../Icons/TrashIcon';
 
 export default {
   /* 👇 The title prop is optional.
@@ -44,3 +47,15 @@ export const Ellipse = () => {
     </div>
   );
 };
+
+export const Icon = () => {
+  return (
+    <div tw="flex gap-4">
+      <Button leftIcon={<ArrowForwardIcon />}>leftIcon</Button>
+      <Button rightIcon={<ArrowForwardIcon />}>rightIcon</Button>
+      <Button leftIcon={<ArrowForwardIcon />} rightIcon={<ArrowForwardIcon />}>bothIcon</Button>
+    </div>
+  );
+};
+
+

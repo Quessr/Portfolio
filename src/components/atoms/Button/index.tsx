@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -7,28 +8,33 @@ export interface ButtonProps
   size?: 'sm' | 'md' | 'lg';
   variant?: 'fill' | 'outline' | 'ghost';
   ellipse?: boolean;
+  leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
 }
 
 const Button = ({
   size = 'md',
   variant = 'fill',
   ellipse,
+  leftIcon,
+  rightIcon,
+  children,
   ...rest
 }: ButtonProps) => {
-  // console.log(
-  //   [`btn-${size}`, `btn-${variant}`, ellipse && 'btn-ellipse']
-  //     .filter((c) => c)
-  //     .join(' ')
-  // );
   return (
     <StyledButton
+      tw="flex items-center justify-center px-6 gap-6"
       className={clsx(
         `btn-${size}`,
         `btn-${variant}`,
         ellipse && 'btn-ellipse',
       )}
       {...rest}
-    />
+    >
+      {leftIcon}
+      {children}
+      {rightIcon}
+    </StyledButton>
   );
 };
 
