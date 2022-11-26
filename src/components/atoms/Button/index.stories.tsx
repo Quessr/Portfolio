@@ -2,9 +2,10 @@ import { ComponentMeta } from '@storybook/react';
 import 'twin.macro';
 
 import Button from '.';
-import IconButton from './IconButton';
 import ArrowForwardIcon from '../Icons/ArrowForwardIcon';
+import CartIcon from '../Icons/CartIcon';
 import TrashIcon from '../Icons/TrashIcon';
+import IconButton from './IconButton';
 
 export default {
   /* 👇 The title prop is optional.
@@ -53,9 +54,19 @@ export const Icon = () => {
     <div tw="flex gap-4">
       <Button leftIcon={<ArrowForwardIcon />}>leftIcon</Button>
       <Button rightIcon={<ArrowForwardIcon />}>rightIcon</Button>
-      <Button leftIcon={<ArrowForwardIcon />} rightIcon={<ArrowForwardIcon />}>bothIcon</Button>
+      <Button leftIcon={<ArrowForwardIcon />} rightIcon={<ArrowForwardIcon />}>
+        bothIcon
+      </Button>
     </div>
   );
 };
 
-
+export const IconOnly = () => {
+  return (
+    <div tw="flex gap-4">
+      <IconButton size="lg" icon={<TrashIcon />}/>
+      <IconButton size="md" variant="ghost" icon={<CartIcon />}/>
+      <IconButton size="sm" icon={<ArrowForwardIcon />}/>
+    </div>
+  );
+};

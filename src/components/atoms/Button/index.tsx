@@ -13,6 +13,7 @@ export interface ButtonProps
 }
 
 const Button = ({
+  className,
   size = 'md',
   variant = 'fill',
   ellipse,
@@ -25,6 +26,7 @@ const Button = ({
     <StyledButton
       tw="flex items-center justify-center px-6 gap-6"
       className={clsx(
+        className,
         `btn-${size}`,
         `btn-${variant}`,
         ellipse && 'btn-ellipse',
