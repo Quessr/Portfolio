@@ -4,6 +4,7 @@ import 'twin.macro';
 import Button from '.';
 import ArrowForwardIcon from '../Icons/ArrowForwardIcon';
 import CartIcon from '../Icons/CartIcon';
+import HeartIcon from '../Icons/HeartIcon';
 import TrashIcon from '../Icons/TrashIcon';
 import IconButton from './IconButton';
 
@@ -40,7 +41,7 @@ export const Variants = () => {
   );
 };
 
-export const Ellipse = () => {
+export const Elipse = () => {
   return (
     <div tw="flex gap-4">
       <Button>default example</Button>
@@ -64,9 +65,11 @@ export const Icon = () => {
 export const IconOnly = () => {
   return (
     <div tw="flex gap-4">
-      <IconButton size="lg" icon={<TrashIcon />}/>
-      <IconButton size="md" variant="ghost" icon={<CartIcon />}/>
-      <IconButton size="sm" icon={<ArrowForwardIcon />}/>
+      <IconButton size="lg" variant="outline" icon={<HeartIcon />} />
+      <IconButton size="lg" icon={<TrashIcon />} />
+      <IconButton size="md" variant="ghost" icon={<CartIcon />} />
+      <IconButton size="sm" icon={<ArrowForwardIcon />} />
+      <IconButton size="sm" ellipse icon={<ArrowForwardIcon />} />
     </div>
   );
 };
