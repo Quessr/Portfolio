@@ -1,13 +1,16 @@
 import Button from '../../atoms/Button';
+import useTabs from './hooks/useTabs';
 
-export interface Tapprops extends React.PropsWithChildren {}
+export interface TapProps extends React.PropsWithChildren {
+  index?: number;
+}
 
-const Tab = ({ children }: Tapprops) => {
-  return (
-    <Button size="sm" variant="ghost">
-      {children}
-    </Button>
-  );
+const Tab = ({ index, ...rest }: TapProps) => {
+  const { activeIndex, onChange } = useTabs();
+  const onClick = () => {
+    onChange(index ?? 0);
+  };
+  return <Button size="sm" variant="ghost" onClick={onClick} {...rest} />;
 };
 
 export default Tab;

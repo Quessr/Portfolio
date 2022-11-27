@@ -1,4 +1,4 @@
-import TabsProvider from './context/Tabs.context';
+import TabsProvider from "./context/Tabs.context";
 
 export interface Tapprops extends React.PropsWithChildren {}
 

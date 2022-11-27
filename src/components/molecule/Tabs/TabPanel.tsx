@@ -1,7 +1,12 @@
-export interface TapPanelprops extends React.PropsWithChildren {}
+import useTabs from './hooks/useTabs';
 
-const TabPanel = ({ children }: TapPanelprops) => {
-  return <div>{children}</div>;
+export interface TapPanelProps extends React.PropsWithChildren {
+  index?: number;
+}
+
+const TabPanel = ({ index, ...rest }: TapPanelProps) => {
+  const { activeIndex } = useTabs();
+  return <div data-index={index} hidden={activeIndex !== index} {...rest} />;
 };
 
 export default TabPanel;
