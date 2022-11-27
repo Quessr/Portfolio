@@ -1,3 +1,7 @@
+import clsx from 'clsx';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+
 import Button from '../../atoms/Button';
 import useTabs from './hooks/useTabs';
 
@@ -10,7 +14,25 @@ const Tab = ({ index, ...rest }: TapProps) => {
   const onClick = () => {
     onChange(index ?? 0);
   };
-  return <Button size="sm" variant="ghost" onClick={onClick} {...rest} />;
+  return (
+    <StyledTab
+      className={clsx(index === activeIndex && 'active')}
+      data-index={index}
+      size="sm"
+      variant="ghost"
+      onClick={onClick}
+      {...rest}
+    />
+  );
 };
 
 export default Tab;
+
+const StyledTab = styled(Button)`
+  &.active {
+    ${tw`text-purple-500`}
+  }
+  &:not(.active) {
+    ${tw`text-slate-500`}
+  }
+`;
