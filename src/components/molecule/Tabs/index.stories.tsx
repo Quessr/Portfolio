@@ -1,3 +1,4 @@
+import { useArgs } from '@storybook/client-api';
 import 'twin.macro';
 
 import Tabs from '.';
@@ -14,11 +15,19 @@ export default {
    */
   title: 'Tabs',
   component: Tabs,
+  args: {
+    index: 0,
+  },
 };
 
-export const API = (props: typeof Tabs) => {
+export const API = () => {
+  const [args, updateArgs] = useArgs();
+  const onChange = (index: number) => {
+    console.log('a')
+    updateArgs({ index });
+  };
   return (
-    <Tabs {...props}>
+    <Tabs index={args.index} onChange={onChange}>
       <TabList>
         <Tab>One</Tab>
         <Tab>Two</Tab>

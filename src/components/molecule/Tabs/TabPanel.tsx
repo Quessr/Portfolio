@@ -6,6 +6,7 @@ export interface TapPanelProps extends React.PropsWithChildren {
 
 const TabPanel = ({ index, ...rest }: TapPanelProps) => {
   const { activeIndex } = useTabs();
+
   return <div data-index={index} hidden={activeIndex !== index} {...rest} />;
 };
 

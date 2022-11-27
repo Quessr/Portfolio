@@ -1,10 +1,13 @@
-import TabsProvider from "./context/Tabs.context";
+import TabsProvider from './context/Tabs.context';
 
-export interface Tapprops extends React.PropsWithChildren {}
+export interface TapsProps extends React.PropsWithChildren {
+  index?: number;
+  onChange?(index: number): void;
+}
 
-const Tabs = ({ children }: Tapprops) => {
+const Tabs = ({ children, ...rest }: TapsProps) => {
   return (
-    <TabsProvider>
+    <TabsProvider {...rest}>
       <div>{children}</div>
     </TabsProvider>
   );
