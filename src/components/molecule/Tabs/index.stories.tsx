@@ -23,7 +23,6 @@ export default {
 export const API = () => {
   const [args, updateArgs] = useArgs();
   const onChange = (index: number) => {
-    console.log('a')
     updateArgs({ index });
   };
   return (
