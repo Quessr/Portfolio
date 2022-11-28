@@ -30,7 +30,7 @@ export default Tab;
 
 const StyledTab = styled(Button)`
   &.active {
-    ${tw`text-purple-500`}
+    ${tw`text-black`}
   }
   &:not(.active) {
     ${tw`text-slate-500`}

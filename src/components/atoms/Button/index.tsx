@@ -42,8 +42,7 @@ const Button = ({
 
 const StyledButton = styled.button`
   ${tw`min-w-max`}
-  ${tw`text-purple-500`}
-
+  ${tw`text-black`}
 
   //sizes
   &.btn-sm {
@@ -58,21 +57,21 @@ const StyledButton = styled.button`
 
   //varients
   &.btn-fill {
-    ${tw`bg-purple-500`}
+    ${tw`bg-black`}
     ${tw`text-white`}
-    ${tw`border-2 border-purple-500 rounded-lg`}
-    ${tw`focus:ring-1 focus:ring-purple-500`}
+    ${tw`border-2 border-black `}
+    ${tw`focus:ring-1 focus:ring-black`}
   }
   &.btn-outline {
     ${tw`bg-white`}
-    ${tw`text-purple-500`}
-    ${tw`border-2 border-purple-500 rounded-lg`}
-    ${tw`focus:ring-1 focus:ring-purple-500`}
+    ${tw`text-black`}
+    ${tw`border-2 border-black `}
+    ${tw`focus:ring-1 focus:ring-black`}
   }
   &.btn-ghost {
-    ${tw`bg-none rounded-lg`}
-    ${tw`text-purple-500`}
-    ${tw`hover:bg-purple-50`}
+    ${tw`bg-none `}
+    ${tw`text-black`}
+    ${tw`focus:(border-b-2 border-black)`}
   }
 
   //ellipse
