@@ -7,7 +7,7 @@ import TabList from './TabList';
 import TabPanel from './TabPanel';
 import TabPanels from './TabPanels';
 
-//👇 This default export determines where your story goes in the story list
+// 👇 This default export determines where your story goes in the story list
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading

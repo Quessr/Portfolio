@@ -45,7 +45,7 @@ export const Elipse = () => {
   return (
     <div tw="flex gap-4">
       <Button>default example</Button>
-      <Button ellipse={true}>ellipse example</Button>
+      <Button ellipse>ellipse example</Button>
     </div>
   );
 };

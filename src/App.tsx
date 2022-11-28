@@ -11,7 +11,7 @@ const Button = styled.button`
   ${tw`px-2 text-purple-500 border border-purple-500 bg-white outline-none`}
 `;
 
-function App() {
+const App = () => {
   // const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const count = useSelector((state: RootState) => state.counter.value);
@@ -22,10 +22,10 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -43,6 +43,6 @@ function App() {
       </p>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,9 +1,7 @@
-import clsx from 'clsx';
 import { ReactNode } from 'react';
 import 'twin.macro';
 
 import Button, { ButtonProps } from '.';
-import TrashIcon from '../Icons/TrashIcon';
 
 export interface IconButtonProps
   extends Omit<ButtonProps, 'leftIcon' | 'rightIcon' | 'children'> {

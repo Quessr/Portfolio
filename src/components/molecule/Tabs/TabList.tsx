@@ -3,7 +3,7 @@ import 'twin.macro';
 
 import { TapProps } from './Tab';
 
-export interface TapListprops extends React.PropsWithChildren {}
+export type TapListprops = React.PropsWithChildren;
 
 const TabList = ({ children }: TapListprops) => {
   return (
