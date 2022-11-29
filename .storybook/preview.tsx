@@ -4,7 +4,7 @@ import GlobalStyle from '../src/styles/GlobalStyles';
 
 export const parameters = {
   backgrounds: {
-    default: 'twitter',
+    default: 'coral',
     values: [
       {
         name: 'black',
@@ -13,6 +13,10 @@ export const parameters = {
       {
         name: 'coral',
         value: '#F08E80',
+      },
+      {
+        name: 'gray',
+        value: '##F7F8F9',
       },
       {
         name: 'twitter',
