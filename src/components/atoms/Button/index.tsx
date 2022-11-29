@@ -58,21 +58,21 @@ const StyledButton = styled.button`
 
   //varients
   &.btn-fill {
-    ${tw`bg-black`}
-    ${tw`text-white`}
-    ${tw`border-2 border-black `}
-    ${tw`focus:ring-1 focus:ring-black`}
+    ${tw`bg-secondary`}
+    ${tw`text-primary`}
+    ${tw`border-2 border-secondary `}
+    ${tw`focus:ring-1 focus:ring-secondary`}
     ${tw`hover:opacity-[0.8] transition duration-300`}
   }
   &.btn-outline {
-    ${tw`bg-white`}
-    ${tw`text-black`}
-    ${tw`border-2 border-black `}
-    ${tw`focus:ring-1 focus:ring-black`}
+    ${tw`bg-primary`}
+    ${tw`text-secondary`}
+    ${tw`border-2 border-secondary `}
+    ${tw`focus:ring-1 focus:ring-secondary`}
   }
   &.btn-ghost {
-    ${tw`bg-none `}
-    ${tw`text-black`}
+    ${tw`bg-none`}
+    ${tw`text-secondary`}
     ${tw`focus:(border-b-2 border-black)`}
   }
 

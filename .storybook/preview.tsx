@@ -7,6 +7,10 @@ export const parameters = {
     default: 'twitter',
     values: [
       {
+        name: 'black',
+        value: '#000000',
+      },
+      {
         name: 'coral',
         value: '#F08E80',
       },
