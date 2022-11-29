@@ -2,8 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
 
 const CustomStyles = createGlobalStyle({
+  ':root': {
+    '--color-primary': '255 255 255',
+    '--color-secondary': '240 142 128',
+  },
   body: {
-    WebkitTapHighlightColor: theme`colors.purple.500`,
+    WebkitTapHighlightColor: theme`colors.primary`,
     ...tw`antialiased`,
   },
 });

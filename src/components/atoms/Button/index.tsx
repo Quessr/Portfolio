@@ -10,6 +10,7 @@ export interface ButtonProps
   ellipse?: boolean;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
+  colorScheme?: 'white' | 'point';
 }
 
 const Button = ({
@@ -61,6 +62,7 @@ const StyledButton = styled.button`
     ${tw`text-white`}
     ${tw`border-2 border-black `}
     ${tw`focus:ring-1 focus:ring-black`}
+    ${tw`hover:opacity-[0.8] transition duration-300`}
   }
   &.btn-outline {
     ${tw`bg-white`}
