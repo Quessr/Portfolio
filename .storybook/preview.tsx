@@ -19,8 +19,8 @@ export const parameters = {
         value: '##F7F8F9',
       },
       {
-        name: 'twitter',
-        value: '#00aced',
+        name: 'pale orange',
+        value: '#fbcfb1a4',
       },
       {
         name: 'facebook',

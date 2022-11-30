@@ -72,8 +72,8 @@ const StyledButton = styled.button`
   }
   &.btn-ghost {
     ${tw`bg-none`}
-    ${tw`text-secondary`}
-    ${tw`focus:(border-b-2 border-black)`}
+    ${tw`text-primary`}
+    /* ${tw`focus:(border-b-2 border-black)`} */
   }
 
   //ellipse
