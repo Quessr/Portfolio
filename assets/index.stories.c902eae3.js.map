@@ -1,1 +1,0 @@
-{"version":3,"file":"index.stories.c902eae3.js","sources":["../../src/components/molecule/Footer/index.tsx"],"sourcesContent":["const Footer = () => {\n  return null;\n};\n\nexport default Footer;\n"],"names":["Footer","__name","Footer$1"],"mappings":"0JAAA,MAAMA,EAASC,EAAA,IACN,KADM,UAIfC,EAAeF;;;;;;;;;;;;;;;;"}
