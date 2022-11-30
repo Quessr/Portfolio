@@ -4,7 +4,7 @@ import GlobalStyle from '../src/styles/GlobalStyles';
 
 export const parameters = {
   backgrounds: {
-    default: 'coral',
+    default: 'pale orange',
     values: [
       {
         name: 'black',
