@@ -1,4 +1,5 @@
 import { ComponentMeta } from '@storybook/react';
+import 'twin.macro';
 
 import LabelInput from '.';
 
@@ -12,5 +13,9 @@ export default {
 } as ComponentMeta<typeof LabelInput>;
 
 export const API = (props: typeof LabelInput) => {
-  return <LabelInput {...props} />;
+  return (
+    <div tw="bg-primary px-4 py-4">
+      <LabelInput name="Name" inputTitle="Name *" size="sm" {...props} />
+    </div>
+  );
 };
