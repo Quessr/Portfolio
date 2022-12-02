@@ -32,7 +32,7 @@ export const FocusOutline = () => {
       <Input focusOutline placeholder="white outline" />
       <Input
         focusOutline
-        tw="focus:outline-black!"
+        tw="focus:outline-tertiay!"
         placeholder="black outline"
       />
     </div>
