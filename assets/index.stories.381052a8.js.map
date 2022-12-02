@@ -1,0 +1,1 @@
+{"version":3,"file":"index.stories.381052a8.js","sources":["../../src/components/atoms/LabelInput/index.tsx"],"sourcesContent":["const LabelInput = () => {\n  return null;\n};\n\nexport default LabelInput;\n"],"names":["LabelInput","__name","LabelInput$1"],"mappings":"0JAAA,MAAMA,EAAaC,EAAA,IACV,KADU,cAInBC,EAAeF;;;;;;;;;;;;;;;;"}
