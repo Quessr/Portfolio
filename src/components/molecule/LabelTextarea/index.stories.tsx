@@ -1,24 +1,24 @@
 import { ComponentMeta } from '@storybook/react';
 import 'twin.macro';
 
-import LabelInput from '.';
+import LabelTextarea from '.';
 
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Molecule / LabelInput',
-  component: LabelInput,
-} as ComponentMeta<typeof LabelInput>;
+  title: 'Molecule / LabelTextarea',
+  component: LabelTextarea,
+} as ComponentMeta<typeof LabelTextarea>;
 
-export const API = (props: typeof LabelInput) => {
+export const API = (props: typeof LabelTextarea) => {
   return (
     <div tw="bg-primary px-4 py-4">
-      <LabelInput
+      <LabelTextarea
         name="Name"
-        inputTitle="Name *"
-        size="sm"
+        textareaTitle="Name *"
+        size="md"
         focusOutline
         {...props}
       />
