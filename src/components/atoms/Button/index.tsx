@@ -47,10 +47,10 @@ const StyledButton = styled.button`
 
   //sizes
   &.btn-sm {
-    ${tw`h-10 w-10 text-base`}
+    ${tw`h-10 w-10 text-sm`}
   }
   &.btn-md {
-    ${tw`h-12 w-12 text-xl`}
+    ${tw`h-12 w-12 text-base`}
   }
   &.btn-lg {
     ${tw`h-14 w-14 text-[32px]`}

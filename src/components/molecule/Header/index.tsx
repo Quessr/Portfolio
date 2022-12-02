@@ -15,7 +15,7 @@ const Header = () => {
         </Button>
       </div>
       <div tw="flex justify-end">
-        <Button size="md" variant="outline" tw="!text-base">
+        <Button size="md" variant="outline">
           Contact Me
         </Button>
       </div>

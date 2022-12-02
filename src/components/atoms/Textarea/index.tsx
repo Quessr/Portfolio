@@ -27,7 +27,7 @@ const Textarea = ({
 };
 
 const StyledTextarea = styled.textarea`
-  ${tw`outline-none pl-2 `}
+  ${tw`outline-none pl-2 pt-2`}
 
   //sizes
   &.textarea-sm {
