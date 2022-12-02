@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div tw="w-full bg-primary text-primary px-8 py-5 grid grid-cols-3">
       <div tw="flex justify-start ">
-        <Button size="md">Blog</Button>
+        <Button size="md" variant="ghost">
+          Blog
+        </Button>
         {/* <Button>left2</Button> */}
       </div>
       <div tw="flex justify-center">

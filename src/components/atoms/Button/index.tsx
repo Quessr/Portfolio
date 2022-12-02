@@ -69,10 +69,12 @@ const StyledButton = styled.button`
     ${tw`text-primary`}
     ${tw`border-2 border-primary `}
     ${tw`focus:ring-1 focus:ring-primary`}
+    ${tw`hover:opacity-[0.8] transition duration-300`}
   }
   &.btn-ghost {
     ${tw`bg-none`}
     ${tw`text-secondary`}
+    ${tw`hover:opacity-[0.8] transition duration-300`}
     /* ${tw`focus:(border-b-2 border-black)`} */
   }
 
