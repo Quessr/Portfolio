@@ -1,8 +1,8 @@
 import 'twin.macro';
 
 import Button from '../../atoms/Button';
-import LabelInput from '../../molecule/LabelInput';
-import LabelTextarea from '../../molecule/LabelTextarea';
+import LabelInput from '../../molecules/LabelInput';
+import LabelTextarea from '../../molecules/LabelTextarea';
 
 const ContactForm = () => {
   return (
