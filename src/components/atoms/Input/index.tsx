@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import styled from 'styled-components';
-import tw from 'twin.macro';
+import tw, { styled } from 'twin.macro';
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
@@ -10,8 +9,8 @@ export interface InputProps
 
 const Input = ({
   className,
-  size = 'md',
   focusOutline,
+  size = 'md',
   ...rest
 }: InputProps) => {
   return (

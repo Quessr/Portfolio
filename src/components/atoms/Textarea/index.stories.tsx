@@ -1,16 +1,16 @@
 import { ComponentMeta } from '@storybook/react';
 
-import Caption from '.';
+import Textarea from '.';
 
 export default {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Atoms / Caption',
-  component: Caption,
-} as ComponentMeta<typeof Caption>;
+  title: 'Atoms / Textarea',
+  component: Textarea,
+} as ComponentMeta<typeof Textarea>;
 
-export const API = (props: typeof Caption) => {
-  return <Caption {...props} />;
+export const API = (props: typeof Textarea) => {
+  return <Textarea {...props} />;
 };
