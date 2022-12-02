@@ -5,15 +5,17 @@ import Button from '../../atoms/Button';
 const Header = () => {
   return (
     <div tw="w-full bg-primary text-primary px-8 py-5 grid grid-cols-3">
-      <div tw="flex justify-start">
-        <Button>Blog</Button>
+      <div tw="flex justify-start ">
+        <Button size="md">Blog</Button>
         {/* <Button>left2</Button> */}
       </div>
       <div tw="flex justify-center">
-        <Button variant="ghost">Portfolio</Button>
+        <Button size="lg" variant="ghost">
+          Portfolio
+        </Button>
       </div>
       <div tw="flex justify-end">
-        <Button size="md" variant="outline" tw="text-lg">
+        <Button size="md" variant="outline" tw="!text-base">
           Contact Me
         </Button>
       </div>

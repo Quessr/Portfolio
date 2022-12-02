@@ -47,13 +47,13 @@ const StyledButton = styled.button`
 
   //sizes
   &.btn-sm {
-    ${tw`h-10 w-10`}
+    ${tw`h-10 w-10 text-base`}
   }
   &.btn-md {
-    ${tw`h-12 w-12`}
+    ${tw`h-12 w-12 text-xl`}
   }
   &.btn-lg {
-    ${tw`h-14 w-14`}
+    ${tw`h-14 w-14 text-[32px]`}
   }
 
   //varients

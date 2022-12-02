@@ -1,12 +1,21 @@
+import { ReactElement } from 'react';
 import 'twin.macro';
 
 export interface SectionProps extends React.PropsWithChildren {
   sectionTitle: string;
   title?: string;
+  image?: string;
   items: Array<{ subTitle?: string; contents: string | string[] }>;
+  captions?: ReactElement[];
 }
 
-const Section = ({ sectionTitle, title, items }: SectionProps) => {
+const Section = ({
+  sectionTitle,
+  title,
+  image,
+  items,
+  captions,
+}: SectionProps) => {
   return (
     <div tw="w-full grid grid-cols-2 mt-16">
       {/* section title */}
@@ -14,8 +23,11 @@ const Section = ({ sectionTitle, title, items }: SectionProps) => {
 
       {/* units */}
       <div tw="grid gap-y-4">
+        {/* sub title */}
         {title && <h4 tw="text-2xl font-medium">{title}</h4>}
         {title && <hr />}
+
+        {image && <img tw="w-[450px]" src={image} alt="_" />}
 
         {items.map((item) => {
           return (
@@ -28,11 +40,14 @@ const Section = ({ sectionTitle, title, items }: SectionProps) => {
                   })}
                 </ul>
               ) : (
-                <pre tw="text-base mx-1">{item.contents.trim()}</pre>
+                <pre tw="text-base mx-1 whitespace-pre-wrap">
+                  {item.contents.trim()}
+                </pre>
               )}
             </>
           );
         })}
+        {captions}
       </div>
     </div>
   );
