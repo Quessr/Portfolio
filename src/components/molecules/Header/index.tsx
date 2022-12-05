@@ -5,7 +5,7 @@ import Link from '../../atoms/Link';
 
 const Header = () => {
   return (
-    <div tw="w-full bg-primary px-8 py-5 grid grid-cols-3">
+    <div tw="w-full bg-primary px-28 py-10 grid grid-cols-3">
       <div tw="flex justify-start ">
         <Link
           href="https://quessr.tistory.com/"
