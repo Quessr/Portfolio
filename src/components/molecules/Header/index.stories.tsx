@@ -1,4 +1,5 @@
 import { ComponentMeta } from '@storybook/react';
+import 'twin.macro';
 
 import Header from '.';
 
@@ -12,5 +13,10 @@ export default {
 } as ComponentMeta<typeof Header>;
 
 export const API = (props: typeof Header) => {
-  return <Header {...props} />;
+  return (
+    <div tw="grid gap-y-5">
+      <Header {...props} />
+      <Header {...props} tw="bg-quarternary!" />
+    </div>
+  );
 };

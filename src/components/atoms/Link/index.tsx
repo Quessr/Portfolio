@@ -22,10 +22,10 @@ const Link = ({ className, size, active, children, href }: LinkProps) => {
 const StyledLink = styled.a`
   //size
   &.link-sm {
-    ${tw`h-10 text-sm`}
+    ${tw`h-10 text-base`}
   }
   &.link-md {
-    ${tw`h-12 text-base`}
+    ${tw`h-12 text-lg`}
   }
   &.link-lg {
     ${tw`h-14 text-[32px]`}
