@@ -13,10 +13,5 @@ export default {
 } as ComponentMeta<typeof Header>;
 
 export const API = (props: typeof Header) => {
-  return (
-    <div tw="grid gap-y-5">
-      <Header {...props} />
-      <Header {...props} tw="bg-quarternary!" />
-    </div>
-  );
+  return <Header {...props} />;
 };
