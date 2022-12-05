@@ -1,19 +1,18 @@
-import { PropsWithChildren } from 'react';
 import 'twin.macro';
 
 import Link from '../../atoms/Link';
 
-export interface CardProps extends PropsWithChildren {
-  image?: string;
-  title?: string;
-  description?: string;
-  pubDate?: string;
+export interface CardProps {
+  thumbnail: string;
+  title: string;
+  description: string;
+  pubDate: string;
 }
 
-const Card = ({ image, title, pubDate, description }: CardProps) => {
+const Card = ({ thumbnail, title, pubDate, description }: CardProps) => {
   return (
     <div tw="flex gap-6">
-      <img src={image} alt="4" tw="min-w-[200px] h-[200px] object-cover" />
+      <img src={thumbnail} alt="4" tw="min-w-[200px] h-[200px] object-cover" />
       <div>
         <h1 tw="text-3xl mb-5 pt-3">{title}</h1>
         <div tw="mb-3 text-gray-500">{pubDate}</div>
