@@ -8,6 +8,7 @@ const BlogTemplate = () => {
   return (
     <div tw="grid gap-y-28 bg-secondary">
       <BlogHeader />
+
       <div tw="px-28">
         <CardList
           datas={[
