@@ -8,17 +8,19 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_c0ii0sw',
+        'template_y3e3vl9',
         e.target as HTMLFormElement,
-        'YOUR_PUBLIC_KEY',
+        'rT12yYllWOljbtm0P',
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          // eslint-disable-next-line no-alert
+          alert('메일 전송에 성공했습니다.');
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          // eslint-disable-next-line no-alert
+          alert('메일 전송에 실패했습니다.');
         },
       );
   };

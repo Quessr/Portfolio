@@ -6,7 +6,7 @@ import Footer from '../../molecules/Footer';
 import Header from '../../molecules/Header';
 import ContactForm, { ContactFormProps } from '../../organisms/ContactForm';
 
-type ContactTemplateProps = ContactFormProps;
+export type ContactTemplateProps = ContactFormProps;
 
 const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
   return (

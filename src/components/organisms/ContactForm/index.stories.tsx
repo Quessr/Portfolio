@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
 import 'twin.macro';
 
-import ContactForm from '.';
+import ContactForm, { ContactFormProps } from '.';
 
 export default {
   /* 👇 The title prop is optional.
@@ -12,7 +12,7 @@ export default {
   component: ContactForm,
 } as ComponentMeta<typeof ContactForm>;
 
-export const API = (props: typeof ContactForm) => {
+export const API = (props: ContactFormProps) => {
   return (
     <div tw="bg-primary px-6 py-6">
       <ContactForm {...props} />
