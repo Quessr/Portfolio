@@ -10,14 +10,16 @@ export interface LabelTextareaProps extends Omit<TextareaProps, 'name'> {
 const LabelTextarea = ({
   name,
   textareaTitle,
+  required,
   ...rest
 }: LabelTextareaProps) => {
   return (
     <div tw="grid">
       <label htmlFor={name} tw="mb-2 text-secondary">
         {textareaTitle}
+        {required && <span> *</span>}
       </label>
-      <Textarea name={name} {...rest} />
+      <Textarea name={name} required={required} {...rest} />
     </div>
   );
 };

@@ -4,11 +4,13 @@ import GithubIcon from '../../atoms/Icons/GithubIcon';
 import TwitterIcon from '../../atoms/Icons/TwitterIcon';
 import Footer from '../../molecules/Footer';
 import Header from '../../molecules/Header';
-import ContactForm from '../../organisms/ContactForm';
+import ContactForm, { ContactFormProps } from '../../organisms/ContactForm';
 
-const ContactTemplate = () => {
+type ContactTemplateProps = ContactFormProps;
+
+const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
   return (
-    <div tw="grid gap-y-28">
+    <div tw="grid gap-y-28 bg-primary">
       <Header />
 
       <div tw="grid grid-cols-2 px-28">
@@ -23,7 +25,7 @@ const ContactTemplate = () => {
           </div>
         </div>
         {/* contactForm */}
-        <ContactForm />
+        <ContactForm onSubmit={onSubmit} />
       </div>
 
       <Footer />

@@ -4,7 +4,7 @@ import 'twin.macro';
 import BlogPage from '.';
 
 export default {
-  title: 'Templates / BlogPage',
+  title: 'Pages / BlogPage',
   component: BlogPage,
 } as ComponentMeta<typeof BlogPage>;
 
