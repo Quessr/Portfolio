@@ -4,13 +4,26 @@ import BlogHeader from '../../molecules/BlogHeader';
 import Footer from '../../molecules/Footer';
 import CardList from '../../organisms/CardList';
 
-const BlogTemplate = () => {
+export interface BlogTemplateProps {
+  items: {
+    content: string;
+    description: string;
+    link: string;
+    pubDate: string;
+    thumbnail: string;
+    title: string;
+  }[];
+}
+
+const BlogTemplate = ({ items }: BlogTemplateProps) => {
+  // console.log(items);
   return (
     <div tw="grid gap-y-28 bg-secondary">
       <BlogHeader />
 
       <div tw="px-28">
-        <CardList
+        <CardList datas={items} />
+        {/* <CardList
           datas={[
             {
               thumbnail:
@@ -77,7 +90,7 @@ const BlogTemplate = () => {
                 'Tailwindcss customizing-colors 기능에 대한 정리\n\n\nTailwindcss customizing-colors 기능 이란?\n사용한 이유\n사용 방법\n좋은점\n\n \n \n \n \n \nTailwindcss',
             },
           ]}
-        />
+        /> */}
       </div>
 
       <Footer />
