@@ -14,14 +14,14 @@ const BlogPage = () => {
       .then((datas: BlogTemplateProps['items']) => {
         const parser = new DOMParser();
 
-        const result = datas.map((data) => {
-          const parseredDescription = parser
+        const parsedDatas = datas.map((data) => {
+          const parsedDescription = parser
             .parseFromString(data.description, 'text/html')
             .querySelector('body')?.textContent;
 
-          return { ...data, description: parseredDescription };
+          return { ...data, description: parsedDescription };
         });
-        // console.log(result);
+        setItems(parsedDatas);
       });
   });
   // console.log(items);
