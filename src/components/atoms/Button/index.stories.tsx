@@ -24,6 +24,7 @@ export const API = (props: typeof Button) => {
 export const Sizes = () => {
   return (
     <div tw="flex gap-4">
+      <Button size="xs">xsmall</Button>
       <Button size="sm">small</Button>
       <Button size="md">medium</Button>
       <Button size="lg">large</Button>

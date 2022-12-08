@@ -5,7 +5,7 @@ import tw from 'twin.macro';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   variant?: 'fill' | 'outline' | 'ghost';
   ellipse?: boolean;
   leftIcon?: ReactNode;
@@ -25,7 +25,6 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <StyledButton
-      tw="flex items-center justify-center px-6 gap-6"
       className={clsx(
         className,
         `btn-${size}`,
@@ -42,18 +41,21 @@ const Button = ({
 };
 
 const StyledButton = styled.button`
-  ${tw`min-w-max`}
+  ${tw`min-w-max flex items-center justify-center gap-6`}
   ${tw`text-black`}
 
   //sizes
+  &.btn-xs {
+    ${tw`h-8 w-8 text-xs px-1`}
+  }
   &.btn-sm {
-    ${tw`h-10 w-10 text-sm`}
+    ${tw`h-10 w-10 text-sm px-2`}
   }
   &.btn-md {
-    ${tw`h-12 w-12 text-base`}
+    ${tw`h-12 w-12 text-base px-4`}
   }
   &.btn-lg {
-    ${tw`h-14 w-14 text-[32px]`}
+    ${tw`h-14 w-14 text-[32px] px-6`}
   }
 
   //varients

@@ -3,6 +3,7 @@ import React from 'react';
 import GlobalStyle from '../src/styles/GlobalStyles';
 
 export const parameters = {
+  layout: 'fullscreen',
   backgrounds: {
     default: 'pale orange',
     values: [
