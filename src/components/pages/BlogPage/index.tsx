@@ -15,9 +15,10 @@ const BlogPage = () => {
         const parser = new DOMParser();
 
         const parsedDatas = datas.map((data) => {
-          const parsedDescription = parser
-            .parseFromString(data.description, 'text/html')
-            .querySelector('body')?.textContent;
+          const parsedDescription =
+            parser
+              .parseFromString(data.description, 'text/html')
+              .querySelector('body')?.textContent ?? '';
 
           return { ...data, description: parsedDescription };
         });
