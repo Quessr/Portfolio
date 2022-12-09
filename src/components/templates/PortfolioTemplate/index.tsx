@@ -10,13 +10,13 @@ const PortfolioTemplate = () => {
       <Header />
 
       {/* Intoduction */}
-      <p tw="text-6xl text-secondary px-40 leading-relaxed py-24">
+      <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary lg:px-40 md:px-24 px-4 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed md:py-24 py-14">
         I&apos;m a Front-end Developer who is interested in the reusable
         components of React.
       </p>
 
       {/* Section1 */}
-      <div tw="bg-primary px-40 py-20 text-secondary">
+      <div tw="bg-primary lg:px-40 md:px-24 px-4 md:py-12 py-8 text-secondary">
         <Section
           sectionTitle="About me"
           items={[
@@ -38,7 +38,7 @@ const PortfolioTemplate = () => {
       </div>
 
       {/* Section2 */}
-      <div tw="bg-secondary px-40 py-20">
+      <div tw="bg-secondary lg:px-40 md:px-24 px-4 md:py-12 py-8">
         <Section
           sectionTitle="About me"
           items={[
@@ -60,7 +60,7 @@ const PortfolioTemplate = () => {
       </div>
 
       {/* Section3 */}
-      <div tw="bg-[#FDF0E6] px-40 py-20">
+      <div tw="bg-[#FDF0E6] lg:px-40 md:px-24 px-4 md:py-12 py-8">
         <Section
           sectionTitle="Projects"
           title="팀 프로젝트 - Mocco"
