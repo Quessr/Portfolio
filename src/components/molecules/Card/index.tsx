@@ -12,11 +12,22 @@ export interface CardProps {
 const Card = ({ thumbnail, title, pubDate, description }: CardProps) => {
   return (
     <div tw="flex gap-6">
-      <img src={thumbnail} alt="4" tw="min-w-[200px] h-[200px] object-cover" />
+      <img
+        src={thumbnail}
+        alt="4"
+        tw="lg:min-w-[200px] lg:h-[200px] md:min-w-[150px] md:h-[150px] min-w-[100px] h-[100px] object-cover"
+      />
       <div>
-        <h1 tw="text-3xl mb-5 pt-3 break-all">{title}</h1>
-        <div tw="mb-3 text-gray-500">{pubDate}</div>
-        <p css={descriptionStyles} tw="mb-3 break-all ">
+        <h1 tw="lg:text-3xl md:text-2xl text-lg mb-5 pt-3 break-all">
+          {title}
+        </h1>
+        <div tw="mb-3 lg:text-[13px] md:text-[7px] text-[2px] text-gray-500">
+          {pubDate}
+        </div>
+        <p
+          css={descriptionStyles}
+          tw="mb-3 lg:text-base md:text-[13px] text-[11px] break-all "
+        >
           {description}
         </p>
         <Link

@@ -18,10 +18,10 @@ export interface BlogTemplateProps {
 const BlogTemplate = ({ items }: BlogTemplateProps) => {
   // console.log(items);
   return (
-    <div tw="grid gap-y-28 bg-secondary">
+    <div tw="grid gap-y-16 bg-secondary">
       <BlogHeader />
 
-      <div tw="px-28 ">
+      <div tw="lg:px-28 md:px-16 px-4 ">
         <CardList datas={items} />
       </div>
 

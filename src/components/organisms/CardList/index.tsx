@@ -8,7 +8,7 @@ export interface CardListProps {
 
 const CardList = ({ datas }: CardListProps) => {
   return (
-    <div tw="grid grid-cols-2 gap-y-10 gap-10">
+    <div tw="grid md:grid-cols-2 sm:grid-cols-1 gap-y-10 gap-10">
       {datas?.map((data) => (
         <Card
           thumbnail={data.thumbnail}
