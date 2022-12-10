@@ -1,0 +1,15 @@
+var f=Object.defineProperty;var r=(e,t)=>f(e,"name",{value:t,configurable:!0});import{C as _}from"./index.88148487.js";import{j as u}from"./jsx-runtime.732dabc0.js";import"./styled-components.browser.esm.ebe042eb.js";import"./index.54f83f35.js";import"./index.cb03884c.js";import"./index.1f3f13b4.js";import"./clsx.m.256e9345.js";import"./index.1d8dea4c.js";import"./index.41c5c48f.js";import"./index.b03631f1.js";import"./index.9165a924.js";import"./index.e1302076.js";import"./index.61e60631.js";import"./iframe.800eb8f9.js";const m={_origin:"https://api.emailjs.com"},h=r((e,t="https://api.emailjs.com")=>{m._userID=e,m._origin=t},"init"),d=r((e,t,s)=>{if(!e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!s)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates";return!0},"validateParams");class p{constructor(t){this.status=t?t.status:0,this.text=t?t.responseText:"Network Error"}}r(p,"EmailJSResponseStatus");const l=r((e,t,s={})=>new Promise((i,a)=>{const n=new XMLHttpRequest;n.addEventListener("load",({target:o})=>{const c=new p(o);c.status===200||c.text==="OK"?i(c):a(c)}),n.addEventListener("error",({target:o})=>{a(new p(o))}),n.open("POST",m._origin+e,!0),Object.keys(s).forEach(o=>{n.setRequestHeader(o,s[o])}),n.send(t)}),"sendPost"),P=r((e,t,s,i)=>{const a=i||m._userID;d(a,e,t);const n={lib_version:"3.10.0",user_id:a,service_id:e,template_id:t,template_params:s};return l("/api/v1.0/email/send",JSON.stringify(n),{"Content-type":"application/json"})},"send"),g=r(e=>{let t;if(typeof e=="string"?t=document.querySelector(e):t=e,!t||t.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of form";return t},"findHTMLForm"),y=r((e,t,s,i)=>{const a=i||m._userID,n=g(s);d(a,e,t);const o=new FormData(n);return o.append("lib_version","3.10.0"),o.append("service_id",e),o.append("template_id",t),o.append("user_id",a),l("/api/v1.0/email/send-form",o)},"sendForm"),w={init:h,send:P,sendForm:y},b=r(()=>u(_,{onSubmit:r(t=>{t.preventDefault(),w.sendForm("service_c0ii0sw","template_y3e3vl9",t.target,"rT12yYllWOljbtm0P").then(()=>{alert("\uBA54\uC77C \uC804\uC1A1\uC5D0 \uC131\uACF5\uD588\uC2B5\uB2C8\uB2E4.")},()=>{alert("\uBA54\uC77C \uC804\uC1A1\uC5D0 \uC2E4\uD328\uD588\uC2B5\uB2C8\uB2E4.")})},"sendEmail")}),"ContactPage"),C=b,H={parameters:{storySource:{source:`import { ComponentMeta } from '@storybook/react';
+import 'twin.macro';
+
+import ContactPage from '.';
+
+export default {
+  title: 'Pages / ContactPage',
+  component: ContactPage,
+} as ComponentMeta<typeof ContactPage>;
+
+export const API = (props: typeof ContactPage) => {
+  return <ContactPage {...props} />;
+};
+`,locationsMap:{api:{startLoc:{col:19,line:11},endLoc:{col:1,line:13},startBody:{col:19,line:11},endBody:{col:1,line:13}}}}},title:"Pages / ContactPage",component:C},k=r(e=>u(C,{...e}),"API"),N=["API"];export{k as API,N as __namedExportsOrder,H as default};
+//# sourceMappingURL=index.stories.c844d28e.js.map
