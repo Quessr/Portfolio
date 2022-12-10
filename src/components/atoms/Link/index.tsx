@@ -1,18 +1,39 @@
 import clsx from 'clsx';
+import React from 'react';
+import { To, useHref, useLinkClickHandler } from 'react-router-dom';
 import tw, { styled } from 'twin.macro';
 
 export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   size?: 'sm' | 'md' | 'lg';
   active?: boolean;
+  to: To;
 }
 // Pick<ButtonProps, 'size' | 'variant' | 'ellipse' | 'colorScheme'>;
 
-const Link = ({ className, size, active, children, href }: LinkProps) => {
+const Link = ({
+  className,
+  size,
+  active,
+  children,
+  onClick,
+  to,
+  ...rest
+}: LinkProps) => {
+  const href = useHref(to);
+  const handleClick = useLinkClickHandler(to);
+
   return (
     <StyledLink
+      {...rest}
       href={href}
       className={clsx(className, `link-${size}`, active && 'link-active')}
+      onClick={(event) => {
+        onClick?.(event);
+        if (!event?.defaultPrevented) {
+          handleClick(event);
+        }
+      }}
     >
       {children}
     </StyledLink>

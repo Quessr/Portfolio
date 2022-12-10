@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import 'twin.macro';
 
 import Button from '../../atoms/Button';
@@ -8,7 +9,7 @@ const Header = () => {
     <div tw="w-full bg-primary lg:px-28 md:px-16 px-4 md:py-10 py-4 grid grid-cols-3">
       <div tw="flex justify-start ">
         <Link
-          href="https://quessr.tistory.com/"
+          to="/blog"
           size="md"
           tw="text-secondary flex items-center scale-75 md:scale-100"
         >
@@ -16,17 +17,22 @@ const Header = () => {
         </Link>
       </div>
       <div tw="flex justify-center">
-        <Link href="/" size="lg" tw="text-secondary scale-75 md:scale-100">
+        <Link to="/" size="lg" tw="text-secondary scale-75 md:scale-100">
           Portfolio
         </Link>
       </div>
       <div tw="flex justify-end items-center">
-        <Button size="md" variant="outline" tw="hidden sm:flex">
-          Contact Me
-        </Button>
-        <Button size="xs" variant="outline" tw="sm:hidden">
-          Contact Me
-        </Button>
+        <NavLink to="/contact">
+          <Button size="md" variant="outline" tw="hidden sm:flex">
+            Contact Me
+          </Button>
+        </NavLink>
+
+        <NavLink to="/contact">
+          <Button size="xs" variant="outline" tw="sm:hidden">
+            Contact Me
+          </Button>
+        </NavLink>
       </div>
     </div>
   );
