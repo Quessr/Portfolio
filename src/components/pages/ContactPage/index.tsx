@@ -8,10 +8,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        'service_c0ii0sw',
-        'template_y3e3vl9',
+        import.meta.env.serviceID,
+        import.meta.env.templateID,
         e.target as HTMLFormElement,
-        'rT12yYllWOljbtm0P',
+        import.meta.env.publicKey,
       )
       .then(
         () => {
