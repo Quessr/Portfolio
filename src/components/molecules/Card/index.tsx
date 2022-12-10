@@ -31,7 +31,7 @@ const Card = ({ thumbnail, title, pubDate, description }: CardProps) => {
           {description}
         </p>
         <Link
-          href="https://quessr.tistory.com/manage/newpost/4?type=post&returnURL=https%3A%2F%2Fquessr.tistory.com%2F4"
+          to="https://quessr.tistory.com/manage/newpost/4?type=post&returnURL=https%3A%2F%2Fquessr.tistory.com%2F4"
           active
           tw="text-quarternary"
         >

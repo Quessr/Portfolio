@@ -1,14 +1,14 @@
 import { ComponentMeta } from '@storybook/react';
 import 'twin.macro';
 
-import Link from '.';
+import Link, { LinkProps } from '.';
 
 export default {
   title: 'Atoms / Link',
   component: Link,
 } as ComponentMeta<typeof Link>;
 
-export const API = (props: typeof Link) => {
+export const API = (props: LinkProps) => {
   return (
     <div>
       <Link {...props}>Blog</Link>
@@ -19,13 +19,13 @@ export const API = (props: typeof Link) => {
 export const Sizes = () => {
   return (
     <div tw="flex gap-7">
-      <Link href="https://quessr.tistory.com/" size="sm">
+      <Link to="https://quessr.tistory.com/" size="sm">
         small
       </Link>
-      <Link href="https://quessr.tistory.com/" size="md" active>
+      <Link to="https://quessr.tistory.com/" size="md" active>
         medium
       </Link>
-      <Link href="https://quessr.tistory.com/" size="lg">
+      <Link to="https://quessr.tistory.com/" size="lg">
         large
       </Link>
     </div>
