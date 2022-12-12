@@ -2,17 +2,14 @@ import 'twin.macro';
 
 import GithubIcon from '../../atoms/Icons/GithubIcon';
 import TwitterIcon from '../../atoms/Icons/TwitterIcon';
-import Footer from '../../molecules/Footer';
-import Header from '../../molecules/Header';
 import ContactForm, { ContactFormProps } from '../../organisms/ContactForm';
+import Layout from '../Layout';
 
 export type ContactTemplateProps = ContactFormProps;
 
 const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
   return (
-    <div tw="grid lg:gap-y-24 md:gap-y-14 gap-y-8 bg-primary">
-      <Header />
-
+    <Layout>
       <div tw="grid md:grid-cols-2 sm:grid-cols-1 lg:px-28 md:px-16 px-8 gap-y-8">
         {/* Get in Touch */}
         <div tw="text-secondary h-[280px] grid">
@@ -27,9 +24,7 @@ const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
         {/* contactForm */}
         <ContactForm onSubmit={onSubmit} />
       </div>
-
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

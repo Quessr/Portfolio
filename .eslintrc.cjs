@@ -34,5 +34,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
+    'react/require-default-props': 'off',
   },
 };

@@ -1,14 +1,11 @@
 import 'twin.macro';
 
-import Footer from '../../molecules/Footer';
-import Header from '../../molecules/Header';
 import Section from '../../molecules/Section';
+import Layout from '../Layout';
 
 const PortfolioTemplate = () => {
   return (
-    <div tw=" bg-primary">
-      <Header />
-
+    <Layout>
       {/* Intoduction */}
       <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary lg:px-40 md:px-24 px-4 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed md:py-24 py-14">
         I&apos;m a Front-end Developer who is interested in the reusable
@@ -78,9 +75,7 @@ const PortfolioTemplate = () => {
           ]}
         />
       </div>
-
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
