@@ -15,7 +15,7 @@ const LabelTextarea = ({
 }: LabelTextareaProps) => {
   return (
     <div tw="grid">
-      <label htmlFor={name} tw="mb-2 text-secondary">
+      <label htmlFor={name} tw="mb-2 text-tertiay">
         {textareaTitle}
         {required && <span> *</span>}
       </label>
