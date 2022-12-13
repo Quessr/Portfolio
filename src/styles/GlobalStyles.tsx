@@ -3,8 +3,7 @@ import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
 
 const CustomStyles = createGlobalStyle({
   ':root': {
-    // '--color-primary': '240 142 128',
-    '--color-primary': '207 238 218',
+    '--color-primary': '240 142 128',
     '--color-secondary': '255 255 255',
     '--color-tertiay': '0 0 0',
     '--color-quarternary': '30 180 159',

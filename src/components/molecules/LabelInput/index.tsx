@@ -15,7 +15,7 @@ const LabelInput = ({
 }: LabelInputProps) => {
   return (
     <div tw="grid">
-      <label htmlFor={name} tw="mb-2 text-tertiay">
+      <label htmlFor={name} tw="mb-2 text-secondary">
         {inputTitle}
         {required && <span> *</span>}
       </label>

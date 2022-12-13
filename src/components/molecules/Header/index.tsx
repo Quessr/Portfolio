@@ -11,13 +11,13 @@ const Header = () => {
         <Link
           to="/blog"
           size="md"
-          tw="text-tertiay flex items-center scale-75 md:scale-100"
+          tw="text-secondary flex items-center scale-75 md:scale-100"
         >
           Blog
         </Link>
       </div>
       <div tw="flex justify-center">
-        <Link to="/" size="lg" tw="text-tertiay scale-75 md:scale-100">
+        <Link to="/" size="lg" tw="text-secondary scale-75 md:scale-100">
           Portfolio
         </Link>
       </div>
