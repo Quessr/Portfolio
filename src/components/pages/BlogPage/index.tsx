@@ -20,12 +20,16 @@ const BlogPage = () => {
               .parseFromString(data.description, 'text/html')
               .querySelector('body')?.textContent ?? '';
 
-          return { ...data, description: parsedDescription };
+          const splitedDate = data.pubDate.split(' ')[0];
+          return {
+            ...data,
+            pubDate: splitedDate,
+            description: parsedDescription,
+          };
         });
         setItems(parsedDatas);
       });
-  });
-  // console.log(items);
+  }, []);
   return <BlogTemplate items={items} />;
 };
 

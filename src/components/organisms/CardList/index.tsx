@@ -17,6 +17,7 @@ const CardList = ({ datas }: CardListProps) => {
           title={data.title}
           pubDate={data.pubDate}
           description={data.description}
+          link={data.link}
         />
       ))}
     </div>

@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import React from 'react';
-import { To, useHref, useLinkClickHandler } from 'react-router-dom';
+import { useHref, useLinkClickHandler } from 'react-router-dom';
 import tw, { styled } from 'twin.macro';
 
 export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   size?: 'sm' | 'md' | 'lg';
   active?: boolean;
-  to: To;
+  to: string;
 }
 // Pick<ButtonProps, 'size' | 'variant' | 'ellipse' | 'colorScheme'>;
 
@@ -29,6 +29,12 @@ const Link = ({
       href={href}
       className={clsx(className, `link-${size}`, active && 'link-active')}
       onClick={(event) => {
+        if (!to.includes(window.location.origin)) {
+          event.preventDefault();
+          window.location.href = to;
+          return;
+        }
+
         onClick?.(event);
         if (!event?.defaultPrevented) {
           handleClick(event);

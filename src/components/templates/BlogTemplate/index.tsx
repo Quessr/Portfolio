@@ -15,7 +15,6 @@ export interface BlogTemplateProps {
 }
 
 const BlogTemplate = ({ items }: BlogTemplateProps) => {
-  // console.log(items);
   return (
     <Layout isBlog blogBg>
       <div tw="lg:px-28 md:px-16 px-4 ">

@@ -7,9 +7,10 @@ export interface CardProps {
   title: string;
   description: string;
   pubDate: string;
+  link: string;
 }
 
-const Card = ({ thumbnail, title, pubDate, description }: CardProps) => {
+const Card = ({ thumbnail, title, pubDate, description, link }: CardProps) => {
   return (
     <div tw="flex gap-6">
       <img
@@ -30,11 +31,7 @@ const Card = ({ thumbnail, title, pubDate, description }: CardProps) => {
         >
           {description}
         </p>
-        <Link
-          to="https://quessr.tistory.com/manage/newpost/4?type=post&returnURL=https%3A%2F%2Fquessr.tistory.com%2F4"
-          active
-          tw="text-quarternary"
-        >
+        <Link to={link} active tw="text-quarternary">
           Read More
         </Link>
       </div>
