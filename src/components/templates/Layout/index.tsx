@@ -13,10 +13,13 @@ interface LayoutProps extends PropsWithChildren {
 const Layout = ({ children, isBlog, blogBg }: LayoutProps) => {
   return (
     <div
-      css={[tw`grid  bg-primary`, blogBg ? tw`bg-secondary` : tw`bg-primary`]}
+      css={[
+        tw`flex flex-col bg-primary h-screen place-content-between`,
+        blogBg ? tw`bg-secondary` : tw`bg-primary`,
+      ]}
     >
       {isBlog ? <BlogHeader /> : <Header />}
-      {children}
+      <div tw="grow">{children}</div>
       <Footer />
     </div>
   );
