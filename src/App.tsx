@@ -6,13 +6,11 @@ import PortfolioPage from './components/pages/PortfolioPage';
 
 const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<PortfolioPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<PortfolioPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+    </Routes>
   );
 };
 

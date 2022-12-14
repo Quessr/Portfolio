@@ -14,7 +14,7 @@ const Layout = ({ children, isBlog, blogBg }: LayoutProps) => {
   return (
     <div
       css={[
-        tw`flex flex-col bg-primary h-screen place-content-between`,
+        tw`flex flex-col bg-primary min-h-screen place-content-between`,
         blogBg ? tw`bg-secondary` : tw`bg-primary`,
       ]}
     >

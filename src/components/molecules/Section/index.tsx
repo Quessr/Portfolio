@@ -17,7 +17,7 @@ const Section = ({
   captions,
 }: SectionProps) => {
   return (
-    <div tw="w-full grid md:grid-cols-2 sm:grid-cols-1">
+    <div tw="w-full grid md:grid-cols-2 sm:grid-cols-1 max-w-screen-xl mx-auto">
       {/* section title */}
       <div tw="md:text-3xl text-2xl mb-8">{sectionTitle}</div>
 

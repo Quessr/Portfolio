@@ -7,10 +7,12 @@ const PortfolioTemplate = () => {
   return (
     <Layout>
       {/* Intoduction */}
-      <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary lg:px-40 md:px-24 px-4 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed md:py-24 py-14">
-        I&apos;m a Front-end Developer who is interested in the reusable
-        components of React.
-      </p>
+      <div tw="lg:px-40 md:px-24 px-4">
+        <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary lg:leading-relaxed md:leading-relaxed sm:leading-relaxed md:py-24 py-14 w-full max-w-screen-xl mx-auto">
+          I&apos;m a Front-end Developer who is interested in the reusable
+          components of React.
+        </p>
+      </div>
 
       {/* Section1 */}
       <div tw="bg-primary lg:px-40 md:px-24 px-4 md:py-12 py-8 text-secondary">

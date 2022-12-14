@@ -10,7 +10,7 @@ export type ContactTemplateProps = ContactFormProps;
 const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
   return (
     <Layout>
-      <div tw="grid md:grid-cols-2 sm:grid-cols-1 lg:px-28 md:px-16 px-8 gap-y-8">
+      <div tw="grid md:grid-cols-2 sm:grid-cols-1 lg:px-28 md:px-16 px-8 gap-y-8 max-w-screen-xl m-auto py-28">
         {/* Get in Touch */}
         <div tw="text-secondary h-[280px] grid">
           <h3 tw="md:text-4xl text-3xl">Get in Touch</h3>
