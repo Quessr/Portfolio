@@ -19,7 +19,7 @@ const Layout = ({ children, isBlog, blogBg }: LayoutProps) => {
       ]}
     >
       {isBlog ? <BlogHeader /> : <Header />}
-      <div tw="grow">{children}</div>
+      <div tw="grow flex flex-col">{children}</div>
       <Footer />
     </div>
   );

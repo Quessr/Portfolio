@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
 
+import loadingGIF from '../../../assets/loading.gif';
 import BlogTemplate, { BlogTemplateProps } from '../../templates/BlogTemplate';
+
+export interface BlogPageProps {
+  loading?: boolean;
+}
 
 const BlogPage = () => {
   const [items, setItems] = useState<BlogTemplateProps['items']>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch(
       'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fquessr.tistory.com%2Frss&api_key=4yj4wfdfz8oekzauivyrznnwjjrdtp032aowo1jm',
     )
@@ -28,9 +35,15 @@ const BlogPage = () => {
           };
         });
         setItems(parsedDatas);
+        setLoading(false);
       });
   }, []);
-  return <BlogTemplate items={items} />;
+  return (
+    <>
+      <BlogTemplate items={items} loading={loading} />
+      {loading && <img src={loadingGIF} alt="loading" />}
+    </>
+  );
 };
 
 export default BlogPage;
