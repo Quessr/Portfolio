@@ -18,6 +18,7 @@ export const API = (props: typeof Card) => {
       앨리먼트인지를 검증한 후 Boolean 값으로 true 또는 false를 반환 해
       준다. 즉, 리액트 앨리먼트를 검증하고 확인하기 위해 사용하는 React API
       이다."
+      link="https://quessr.tistory.com/"
       {...props}
     />
   );
