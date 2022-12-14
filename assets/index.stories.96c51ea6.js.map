@@ -1,1 +1,0 @@
-{"version":3,"file":"index.stories.96c51ea6.js","sources":["../../src/components/atoms/Caption/index.tsx"],"sourcesContent":["const Caption = () => {\n  return null;\n};\n\nexport default Caption;\n"],"names":["Caption","__name","Caption$1"],"mappings":"0JAAA,MAAMA,EAAUC,EAAA,IACP,KADO,WAIhBC,EAAeF;;;;;;;;;;;;;;;;"}
