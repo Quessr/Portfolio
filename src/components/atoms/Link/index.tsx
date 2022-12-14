@@ -29,7 +29,7 @@ const Link = ({
       href={href}
       className={clsx(className, `link-${size}`, active && 'link-active')}
       onClick={(event) => {
-        if (!to.includes(window.location.origin)) {
+        if (!to.startsWith('/') && !to.includes(window.location.origin)) {
           event.preventDefault();
           window.location.href = to;
           return;
