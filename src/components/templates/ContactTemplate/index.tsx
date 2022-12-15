@@ -1,7 +1,6 @@
 import 'twin.macro';
 
-import GithubIcon from '../../atoms/Icons/GithubIcon';
-import TwitterIcon from '../../atoms/Icons/TwitterIcon';
+import ContactIcons from '../../molecules/ContactIcons';
 import ContactForm, { ContactFormProps } from '../../organisms/ContactForm';
 import Layout from '../Layout';
 
@@ -16,10 +15,7 @@ const ContactTemplate = ({ onSubmit }: ContactTemplateProps) => {
           <h3 tw="md:text-4xl text-3xl">Get in Touch</h3>
           <p tw="md:text-xl text-lg">Quessr00@gmail.com</p>
           <p tw="md:text-xl text-lg">010 - 7626 - 7410</p>
-          <div tw="flex fill-secondary gap-3">
-            <TwitterIcon />
-            <GithubIcon />
-          </div>
+          <ContactIcons />
         </div>
         {/* contactForm */}
         <ContactForm onSubmit={onSubmit} />
