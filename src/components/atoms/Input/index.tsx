@@ -26,7 +26,7 @@ const Input = ({
 };
 
 const StyledInput = styled.input`
-  ${tw`outline-none pl-2 `}
+  ${tw`outline-none pl-2 appearance-none rounded-none`}
 
   //sizes
   &.input-sm {
