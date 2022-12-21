@@ -10,6 +10,7 @@ const CustomStyles = createGlobalStyle({
   },
   body: {
     WebkitTapHighlightColor: theme`colors.primary`,
+    fontFamily: "'Noto Sans KR', sans-serif",
     ...tw`antialiased`,
   },
 });
