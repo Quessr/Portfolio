@@ -8,7 +8,7 @@ const PortfolioTemplate = () => {
     <Layout>
       {/* Intoduction */}
       <div tw="lg:px-40 md:px-24 px-4">
-        <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary lg:leading-relaxed md:leading-relaxed sm:leading-relaxed md:py-24 py-14 w-full max-w-screen-xl mx-auto">
+        <p tw="lg:text-6xl md:text-5xl text-4xl text-secondary leading-[3rem]! md:py-24 py-14 w-full max-w-screen-xl mx-auto">
           매일 한걸음 차근차근 나아가는 프론트엔드 개발자 허세라 입니다.
         </p>
       </div>

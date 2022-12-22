@@ -40,7 +40,7 @@ const Section = ({
               {Array.isArray(item.contents) ? (
                 <ul tw="list-disc mx-6 grid gap-y-1">
                   {item.contents.map((content) => {
-                    return <li tw="text-xl mx-8 my-1.5">{content}</li>;
+                    return <li tw="md:text-xl mx-8 my-1.5">{content}</li>;
                   })}
                 </ul>
               ) : (

@@ -11,7 +11,7 @@ export interface ContactFormProps {
 
 const ContactForm = ({ onSubmit }: ContactFormProps) => {
   return (
-    <form tw="grid gap-y-10" onSubmit={onSubmit}>
+    <form tw="grid gap-y-10 py-6" onSubmit={onSubmit}>
       <Input name="to_name" value="허세라" hidden required disabled />
       <LabelInput name="from_name" inputTitle="Name" focusOutline required />
       <LabelInput name="email" inputTitle="Email" focusOutline required />
